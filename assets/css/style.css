@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.centered {
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.DEBUG-RED {
+    border: 1px solid red;
+}
+
+.DEBUG-BLUE {
+    border: 1px solid blue;
+}
+
+.DEBUG-GREEN {
+    border: 1px solid green;
+}

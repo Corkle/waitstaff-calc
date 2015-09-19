@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, inital-scale=1">
+    <title>Waiter Earnings Calculator</title>
+    <link rel="stylesheet" type="text/css" href="assets/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container" id="calculator-frame">
+        <div class="row">
+            <div class="col-sm-12 centered" id="page-heading">
+                <h1>Waitstaff Calculator</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Enter the Meal Details</div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label for="meal-price" class="control-label col-sm-6">Base Meal Price: $</label>
+                                <div class="col-sm-4">
+                                    <input id="meal-price" class="form-control" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tax-rate" class="control-label col-sm-6">Tax Rate: %</label>
+                                <div class="col-sm-3">
+                                    <input id="tax-rate" class="form-control" type="text" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="tip-percent" class="control-label col-sm-6">Tip Percentage: %</label>
+                                <div class="col-sm-3">
+                                    <input id="tip-percent" class="form-control" type="text" />
+                                </div>
+                            </div>
+                            <div class="centered">
+                                <br>
+                                <button type="button" class="btn btn-primary">Submit</button>
+                                <button type="button" class="btn btn-default">Cancel</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5 col-sm-offset-1">
+                <div class="panel panel-default">
+                    <div class="panel-heading">Customer Charges</div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-sm-6">Subtotal</label>
+                                <div class="col-sm-4">
+                                    <p class="form-control-static" type="text">{{ charge.subtotal }}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-6">Tip</label>
+                                <div class="col-sm-4">
+                                    <p class="form-control-static" type="text">{{ charge.tip }}</p>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="form-group">
+                                <label class="control-label col-sm-6">Total</label>
+                                <div class="col-sm-4">
+                                    <p class="form-control-static" type="text">{{ charge.total }}</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">My Earning Info</div>
+                    <div class="panel-body">
+                        <form class="form-horizontal">
+                            <div class="form-group">
+                                <label class="control-label col-sm-6">Tip Total: </label>
+                                <div class="col-sm-4">
+                                    <p class="form-control-static" type="text">{{ earnings.tipTotal }}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-6">Meal Count:</label>
+                                <div class="col-sm-4">
+                                    <p class="form-control-static" type="text">{{ earnings.mealCount }}</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-6">Average Tip Per Meal:</label>
+                                <div class="col-sm-4">
+                                    <p class="form-control-static" type="text">{{ earnings.averageTip }}</p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row"></div>
+    </div>
+
+    <div class="row">
+        <div class="centered">
+            <button type="button" class="btn btn-default">Reset</button>
+        </div>
+    </div>
+
+
+    <script src="assets/libs/angular.1.4.5.min.js"></script>
+    <script src="assets/libs/jquery-1.11.3.js"></script>
+    <script src="assets/libs/bootstrap.min.js"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+
+</html>
