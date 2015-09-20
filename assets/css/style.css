@@ -6,7 +6,13 @@
     text-align: center;
 }
 
+#page-heading {
+    margin: 20px auto;
+}
 
+#meal-buttons button {
+    margin: 40px 10px;
+}
 
 
 
