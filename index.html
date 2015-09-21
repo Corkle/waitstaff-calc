@@ -26,13 +26,13 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-6">Base Meal Price:</label>
                                 <div class="col-sm-5">
-                                    <input id="mealPrice" class="form-control" type="text" placeholder="$ 00.00" required ng-model="calc.mealPrice" ui-money-mask="2"/>
+                                    <input id="mealPrice" class="form-control" type="text" placeholder="$ 00.00" required ng-model="calc.mealPrice" ui-money-mask="2" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label class="control-label col-sm-6">Tax Rate:</label>
                                 <div class="col-sm-4">
-                                    <input id="taxRate" class="form-control" type="text" placeholder="00.00 %" required ng-model="calc.taxRate" ui-percentage-mask="2"/>
+                                    <input id="taxRate" class="form-control" type="text" placeholder="00.00 %" required ng-model="calc.taxRate" ui-percentage-mask="2" />
                                 </div>
                             </div>
                             <div class="form-group">
@@ -84,7 +84,7 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-6">Tip Total: </label>
                                 <div class="col-sm-4">
-                                    <p class="form-control-static" type="text">{{ calc.tipTotal | currency:"$" }}</p>
+                                    <p class="form-control-static" type="text">{{ calc.earnings.tipTotal | currency:"$" }}</p>
                                 </div>
                             </div>
                             <div class="form-group">
@@ -96,7 +96,7 @@
                             <div class="form-group">
                                 <label class="control-label col-sm-6">Average Tip Per Meal:</label>
                                 <div class="col-sm-4">
-                                    <p class="form-control-static" type="text">{{ calc.earnings.averageTip | currency:"$" }}</p>
+                                    <p class="form-control-static" type="text">{{ calc.earnings.averageTip() | currency:"$" }}</p>
                                 </div>
                             </div>
                         </form>
@@ -104,14 +104,14 @@
                 </div>
             </div>
         </div>
-        <div class="row"></div>
-    </div>
-
-    <div class="row">
-        <div class="centered">
-            <button type="reset" class="btn btn-default">Reset</button>
+        <div class="row">
+            <div class="centered">
+                <button type="button" class="btn btn-default" ng-click="calc.resetCalc()">Reset</button>
+            </div>
         </div>
     </div>
+
+
 
 
     <!--    <script src="assets/libs/angular.1.4.5.min.js"></script>-->
