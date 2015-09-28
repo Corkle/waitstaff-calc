@@ -1,4 +1,4 @@
-angular.module('calcApp', ['ui.utils.masks'])
+angular.module('calcApp', ['ui.bootstrap'])
     .controller('CalcCtrl', function () {
         function Customer() {
             this.subtotal = 0;
