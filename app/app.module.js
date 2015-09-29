@@ -1,4 +1,4 @@
-angular.module('calcApp', ['ui.bootstrap', 'ngRoute'])
+angular.module('calcApp', ['ui.bootstrap', 'ngRoute', 'ngAnimate'])
     .config(['$routeProvider', function ($routeProvider) {
         $routeProvider.when('/', {
             templateUrl: 'app/components/home/home.html'
@@ -13,6 +13,9 @@ angular.module('calcApp', ['ui.bootstrap', 'ngRoute'])
         })
         .otherwise('/');
 }])
-.controller('NavBarCtrl', function($scope) {
+.controller('NavBarCtrl', function($scope, $location) {
  $scope.isCollapsed = true;
+    $scope.isActive = function(route) {
+        return route === $location.path();
+    };
 });
