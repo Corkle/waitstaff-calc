@@ -22,5 +22,7 @@ angular.module('calcApp').controller('MealCtrl', function($rootScope) {
         this.taxRate = "";
         this.tipPercent = "";
         form.$setPristine();
+        
+        console.log($rootScope);
     };
 });

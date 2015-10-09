@@ -13,6 +13,12 @@ angular.module('calcApp', ['ui.bootstrap', 'ngRoute', 'ngAnimate'])
         })
         .otherwise('/');
 }])
+.run(function($rootScope) {
+    $rootScope.tipTotal = 0;
+    $rootScope.mealCount = 0;
+    $rootScope.lastSubtotal = 0;
+    $rootScope.lastTip = 0;
+})
 .controller('NavBarCtrl', function($scope, $location) {
  $scope.isCollapsed = true;
     $scope.isActive = function(route) {

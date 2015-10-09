@@ -8,6 +8,7 @@ angular.module('calcApp').controller('EarningsCtrl', function($rootScope) {
     }
     
     this.earnings = new Earnings();
+    console.log(this.earnings);
 
     this.resetCalc = function () {
         $rootScope.tipTotal = 0;
